@@ -3,7 +3,7 @@
 
 **Document Type:** Project Management
 **Audience:** Project Owner, Tech Lead
-**Date:** May 25, 2026
+**Last Updated:** May 25, 2026
 
 ---
 
@@ -15,41 +15,31 @@ This document tracks the critical architectural and business decisions that have
 
 ## 2. Pending Decisions
 
-### Decision 1: Language Support at Launch
-- **Context:** MTG has a massive non-English speaking player base (Japan, Germany, Brazil, etc.). Scryfall provides localized card data.
-- **The Question:** Do we support multiple languages at launch, or launch English-only and localize later?
-- **Impact:** Multi-language support requires a fundamentally different database schema for card text and UI internationalization (i18n) from day one. Retrofitting it later is extremely difficult.
-- **Recommendation:** Launch English-only to reduce initial complexity, but build the database schema to support localization (e.g., storing card text in a `card_translations` table rather than directly on the `cards` table).
-- **Status:** Pending Owner Approval
-
-### Decision 2: Mobile Strategy
-- **Context:** The platform is currently scoped as a responsive web application.
-- **The Question:** Do we need a native iOS/Android app, or is a Progressive Web App (PWA) sufficient?
-- **Impact:** A native app allows push notifications (good for price alerts) and uses the device camera for card scanning. A PWA is vastly cheaper to develop and maintain.
-- **Recommendation:** Build as a mobile-first PWA for Phase 1. Evaluate a native wrapper (e.g., React Native or Capacitor) for Phase 2 if users demand camera scanning.
-- **Status:** Pending Owner Approval
-
-### Decision 3: Card Scanning (Computer Vision)
-- **Context:** Competitors like TCGplayer have native apps that let users scan cards with their phone camera to add them to their collection.
-- **The Question:** Do we build or license a computer vision model for card scanning?
-- **Impact:** Building an MTG-specific computer vision model is a massive undertaking. Licensing one (e.g., via an API) is expensive and introduces a live API dependency, violating our local-first data architecture pillar.
-- **Recommendation:** Do not include card scanning at launch. Rely on fast, auto-completing text search and bulk CSV uploads for the initial release.
-- **Status:** Pending Owner Approval
-
-### Decision 4: Multi-Game Data Schema
-- **Context:** The platform intends to support Pokémon, Yu-Gi-Oh!, and Lorcana eventually.
-- **The Question:** Do we build the database schema to support multiple games immediately, or build it for MTG and refactor later?
-- **Impact:** A multi-game schema is highly abstract (e.g., using a JSONB column for `game_specific_attributes` rather than hardcoding `mana_cost`). It is harder to query but future-proof.
-- **Recommendation:** Build the abstract multi-game schema from day one. Hardcoding MTG fields will require a total database rewrite in Phase 3.
-- **Status:** Pending Owner Approval
+*All previously pending decisions have been resolved. No items are currently pending.*
 
 ---
 
 ## 3. Resolved Decisions
 
-*(This section will be populated as the pending decisions are resolved by the project owner.)*
-
 | Decision | Resolution | Rationale | Date Resolved |
 | :--- | :--- | :--- | :--- |
 | **Data Architecture** | Local-First Sync | To ensure speed, reduce API costs, and prevent rate-limiting by upstream providers. | May 25, 2026 |
 | **Monetization Model** | Freemium (Card Data Free) | To comply with WotC Fan Content Policy while gating value-added AI features. | May 25, 2026 |
+| **Language Support at Launch** | English-only at launch. Build the database schema with a `card_translations` table to support future localization without a full rewrite. | Reduces initial complexity while keeping the door open for international expansion. | May 25, 2026 |
+| **Mobile Strategy** | Responsive PWA (Progressive Web App). No native iOS/Android app for Phase 1. | A PWA is significantly cheaper to develop and maintain. Native app can be evaluated in Phase 2 based on user demand. | May 25, 2026 |
+| **Card Scanning (Computer Vision)** | Out of scope for Phase 1. Rely on fast auto-completing text search and bulk CSV import. | Building or licensing a CV model is a major undertaking and would introduce a live API dependency, violating the local-first data architecture pillar. | May 25, 2026 |
+| **Multi-Game Data Schema** | Build an abstract, game-agnostic schema from day one, using Magic: The Gathering as the primary case study to validate the model. | Hardcoding MTG-specific fields would require a total database rewrite when Pokémon, Yu-Gi-Oh!, and Lorcana are added. Abstract from the start. | May 25, 2026 |
+
+---
+
+## 4. Architectural Implications of Resolved Decisions
+
+The four decisions made on May 25, 2026 have the following direct impact on the development plan:
+
+**Language Support:** The `cards` table must **not** store Oracle text directly as a column. Instead, all localized text must live in a `card_localizations` table with a `language_code` column. The application queries this table with `language_code = 'en'` at launch. Adding a new language later requires only a data import, not a schema change.
+
+**PWA:** The frontend must be built **mobile-first**. All layouts, touch targets, and navigation patterns must be designed for a phone screen first, then scaled up to desktop. The application must register a Service Worker to enable offline access to a user's collection.
+
+**No Card Scanning:** The card search experience must be **exceptionally fast and forgiving**. Auto-complete must trigger on the first keystroke, tolerate minor misspellings (fuzzy search), and return results in under 100ms. This is the primary card-entry mechanism and must be treated as a first-class feature.
+
+**Abstract Multi-Game Schema:** The core data model must use a `games` table as the top-level entity. Cards, sets, formats, and mechanics must all be scoped to a `game_id`. MTG is `game_id = 1`. All queries must be written to include `game_id` as a filter from the first line of code.
