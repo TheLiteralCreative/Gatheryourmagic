@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 150px auto 1fr;
+            border: 8px solid #1A1A24;
+        }
+        
+        .header-row {
+            grid-column: 1 / -1;
+            border-bottom: 8px solid #1A1A24;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+            background-color: #FFFFFF;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 42px;
+            color: #1A1A24;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .intro-row {
+            grid-column: 1 / -1;
+            border-bottom: 8px solid #1A1A24;
+            padding: 30px 60px;
+            background-color: #FAFAFA;
+        }
+
+        p.intro-text {
+            font-size: 24px;
+            line-height: 1.5;
+            color: #1A1A24;
+        }
+
+        .col {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-1 { border-right: 8px solid #1A1A24; }
+        .col-2 { border-right: 8px solid #1A1A24; }
+
+        .number-accent {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 80px;
+            color: #8B0000;
+            line-height: 1;
+            margin-bottom: 20px;
+            border-bottom: 4px solid #DAA520;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            color: #1A1A24;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        p.body-text {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-row">
+            <h1>GatherYourMagic Turns Your Inventory Into a Searchable Database</h1>
+        </div>
+        <div class="intro-row">
+            <p class="intro-text">GatherYourMagic is a purpose-built platform for exactly this problem. The MVP delivers three core capabilities, designed specifically around how a local game store operates.</p>
+        </div>
+        <div class="col col-1">
+            <div class="number-accent">01</div>
+            <h2>The Inventory System</h2>
+            <p class="body-text">A complete, searchable digital catalogue of your entire MTG collection, with condition, location, and pricing for every card.</p>
+        </div>
+        <div class="col col-2">
+            <div class="number-accent">02</div>
+            <h2>The In-Store Kiosk</h2>
+            <p class="body-text">A locked-down search terminal customers can use on a tablet or screen in your store to find cards themselves.</p>
+        </div>
+        <div class="col col-3">
+            <div class="number-accent">03</div>
+            <h2>The Public Storefront</h2>
+            <p class="body-text">A public web page at gatheryourmagic.com/stores/[yourstore] where customers can browse your inventory from home before they visit.</p>
+        </div>
+    </div>
+</body>
+</html>

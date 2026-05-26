@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 150px 1fr;
+            border: 8px solid #1A1A24;
+        }
+        
+        .header-row {
+            grid-column: 1 / -1;
+            border-bottom: 8px solid #1A1A24;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+            background-color: #FFFFFF;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 52px;
+            color: #1A1A24;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .col-left {
+            border-right: 8px solid #1A1A24;
+            padding: 50px;
+            background-color: #FAFAFA;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-right {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #FFFFFF;
+        }
+
+        p.intro-text {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        p.intro-text::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 100px;
+            float: left;
+            line-height: 0.8;
+            padding-right: 15px;
+            padding-top: 10px;
+            color: #8B0000;
+        }
+
+        .timeline-row {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            border-bottom: 4px solid #1A1A24;
+            min-height: 70px;
+        }
+
+        .timeline-row:last-child {
+            border-bottom: none;
+            background-color: #DAA520;
+            flex-grow: 1;
+        }
+
+        .week-col {
+            padding: 20px 20px;
+            border-right: 4px solid #1A1A24;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 24px;
+            color: #8B0000;
+            display: flex;
+            align-items: center;
+        }
+
+        .milestone-col {
+            padding: 18px 24px;
+            font-size: 22px;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-row:last-child .week-col {
+            color: #1A1A24;
+        }
+
+        .timeline-row:last-child .milestone-col {
+            font-weight: 700;
+            color: #1A1A24;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-row">
+            <h1>From Commission to Live System in 8 Weeks</h1>
+        </div>
+        <div class="col-left">
+            <p class="intro-text">The MVP is scoped to deliver exactly what was commissioned — no more, no less. The timeline is structured so that the most critical piece (the inventory system) is completed first, with the customer-facing features built on top of it.</p>
+        </div>
+        <div class="col-right">
+            <div class="timeline-row">
+                <div class="week-col">Week 1</div>
+                <div class="milestone-col">Infrastructure setup, hosting, and domain configuration</div>
+            </div>
+            <div class="timeline-row">
+                <div class="week-col">Weeks 2–3</div>
+                <div class="milestone-col">Database foundation — all 30,000+ MTG cards loaded and searchable</div>
+            </div>
+            <div class="timeline-row">
+                <div class="week-col">Weeks 4–5</div>
+                <div class="milestone-col">User accounts, store account setup, and secure login</div>
+            </div>
+            <div class="timeline-row">
+                <div class="week-col">Week 6</div>
+                <div class="milestone-col">Card search interface — fast, fuzzy, autocomplete</div>
+            </div>
+            <div class="timeline-row">
+                <div class="week-col">Weeks 7–8</div>
+                <div class="milestone-col">Store inventory management, Kiosk Mode, and Public Storefront</div>
+            </div>
+            <div class="timeline-row">
+                <div class="week-col">End of Wk 8</div>
+                <div class="milestone-col">Beta launch with your store as the first live client</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

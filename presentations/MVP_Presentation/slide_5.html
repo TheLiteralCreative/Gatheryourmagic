@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            display: grid;
+            grid-template-columns: 2fr 1.5fr 1.5fr;
+            grid-template-rows: 150px 1fr;
+            border: 8px solid #1A1A24;
+        }
+        
+        .header-row {
+            grid-column: 1 / -1;
+            border-bottom: 8px solid #1A1A24;
+            display: flex;
+            align-items: center;
+            padding-top: 0;
+            padding-left: 60px;
+            padding-right: 60px;
+            background-color: #FFFFFF;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 44px;
+            color: #1A1A24;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .col {
+            padding-top: 20px; /* reduced from 50px to save vertical space */
+            padding-left: 50px;
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-1 {
+            border-right: 8px solid #1A1A24;
+            background-color: #FFFFFF;
+        }
+
+        .col-2 {
+            border-right: 8px solid #1A1A24;
+            background-color: #FAFAFA;
+        }
+
+        .col-3 {
+            background-color: #8B0000;
+            color: #FFFFFF;
+        }
+
+        p.intro-text {
+            font-size: 26px;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        p.intro-text::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 110px;
+            float: left;
+            line-height: 0.8;
+            padding-right: 15px;
+            padding-top: 10px;
+            color: #8B0000;
+        }
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 26px;
+            margin-bottom: 20px; /* slightly reduced */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .col-2 h2 {
+            color: #1A1A24;
+            border-top: 4px solid #DAA520;
+            padding-top: 15px;
+        }
+
+        .col-3 h2 {
+            color: #DAA520;
+            border-top: 4px solid #FFFFFF;
+            padding-top: 15px;
+        }
+
+        ul.feature-list {
+            list-style: none;
+        }
+
+        ul.feature-list li {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 18px; /* reduced spacing between items */
+            display: flex;
+            align-items: flex-start;
+            color: #333333;
+        }
+
+        ul.feature-list li i {
+            color: #8B0000;
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 4px;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        p.impact-text {
+            font-size: 22px;
+            line-height: 1.6;
+            margin-bottom: 30px; /* reduced */
+            color: #FFFFFF;
+        }
+
+        p.impact-highlight {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1.3;
+            color: #DAA520;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-row">
+            <h1>Customers Find What They Need — Without Asking Every Time</h1>
+        </div>
+        
+        <div class="col col-1">
+            <p class="intro-text">The Kiosk Mode transforms any tablet, laptop, or monitor in your store into a customer-facing search terminal. It is locked to a read-only view of your inventory — customers can search and browse, but they cannot change anything.</p>
+        </div>
+        
+        <div class="col col-2">
+            <h2>What a customer sees</h2>
+            <ul class="feature-list">
+                <li><i class="fas fa-search"></i> Search bar with instant autocomplete</li>
+                <li><i class="fas fa-tag"></i> Card image, condition, and your price</li>
+                <li><i class="fas fa-map-marker-alt"></i> Physical location in the store</li>
+                <li><i class="fas fa-layer-group"></i> How many copies you have in stock</li>
+            </ul>
+        </div>
+        
+        <div class="col col-3">
+            <h2>Staff Impact</h2>
+            <p class="impact-text">Instead of interrupting an employee to ask "do you have a Rhystic Study?", the customer checks the kiosk, finds it in Binder 4, and brings it to the register.</p>
+            <p class="impact-highlight">Your staff spends less time searching and more time selling.</p>
+        </div>
+    </div>
+</body>
+</html>

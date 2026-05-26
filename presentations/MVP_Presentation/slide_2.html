@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr;
+            grid-template-rows: 150px 1fr;
+            border: 8px solid #1A1A24;
+        }
+        
+        .header-row {
+            grid-column: 1 / -1;
+            border-bottom: 8px solid #1A1A24;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+            background-color: #FFFFFF;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 56px;
+            color: #1A1A24;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .col-left {
+            border-right: 8px solid #1A1A24;
+            background-color: #DAA520;
+            position: relative;
+        }
+        
+        .col-left::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 26%; /* slightly reduced to save space */
+            background-color: #8B0000;
+            border-top: 8px solid #1A1A24;
+        }
+
+        /* Reduced inner vertical padding to decrease overall height */
+        .col-center {
+            padding: 36px;
+            border-right: 8px solid #1A1A24;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .col-right {
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #FAFAFA;
+        }
+
+        p.intro-text {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 18px; /* reduced spacing */
+        }
+
+        p.intro-text::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 100px;
+            float: left;
+            line-height: 0.8;
+            padding-right: 15px;
+            padding-top: 10px;
+            color: #8B0000;
+        }
+        
+        p.conclusion-text {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1A1A24;
+            border-top: 4px solid #DAA520;
+            padding-top: 20px;
+        }
+
+        ul.key-points {
+            list-style: none;
+        }
+
+        ul.key-points li {
+            font-size: 22px;
+            line-height: 1.5;
+            margin-bottom: 18px; /* reduced spacing */
+            display: flex;
+            align-items: flex-start;
+        }
+
+        ul.key-points li i {
+            color: #8B0000;
+            font-size: 20px;
+            margin-right: 20px;
+            margin-top: 4px; /* slightly reduced */
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-row">
+            <h1>A Great Collection Deserves a Great System</h1>
+        </div>
+        <div class="col-left"></div>
+        <div class="col-center">
+            <p class="intro-text">Your store has a significant Magic: The Gathering inventory — but right now, finding a specific card means digging through binders, boxes, and memory. Customers ask if you have a card. Employees aren't sure. Sales are lost.</p>
+            <p class="conclusion-text">The problem isn't the collection. The problem is the lack of a system.</p>
+        </div>
+        <div class="col-right">
+            <ul class="key-points">
+                <li><i class="fas fa-search"></i> Cards are difficult to locate quickly during a customer interaction</li>
+                <li><i class="fas fa-store-slash"></i> No reliable way for customers to check availability before visiting the store</li>
+                <li><i class="fas fa-clipboard-list"></i> Inventory tracking is inconsistent, making it hard to know what you actually have</li>
+                <li><i class="fas fa-coins"></i> Missed sales equal lost revenue from an asset you already own</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

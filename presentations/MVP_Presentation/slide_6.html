@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            display: grid;
+            grid-template-columns: 2fr 2.5fr 0.5fr;
+            grid-template-rows: 150px 1fr;
+            border: 8px solid #1A1A24;
+        }
+        
+        .header-row {
+            grid-column: 1 / -1;
+            border-bottom: 8px solid #1A1A24;
+            display: flex;
+            align-items: center;
+            padding-left: 60px;
+            padding-right: 60px;
+            background-color: #FFFFFF;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 42px;
+            color: #1A1A24;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .col-left {
+            padding-top: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border-right: 8px solid #1A1A24;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-center {
+            padding-top: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border-right: 8px solid #1A1A24;
+            background-color: #FAFAFA;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-right {
+            background-color: #DAA520;
+            position: relative;
+        }
+        
+        .col-right::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background-color: #8B0000;
+            border-top: 8px solid #1A1A24;
+        }
+
+        p.intro-text {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        p.intro-text::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 100px;
+            float: left;
+            line-height: 0.8;
+            padding-right: 15px;
+            padding-top: 10px;
+            color: #8B0000;
+        }
+
+        .url-box {
+            margin-top: auto;
+            margin-bottom: 50px;
+            border: 8px solid #1A1A24;
+            padding-top: 25px;
+            padding-left: 25px;
+            padding-right: 25px;
+            background-color: #FFFFFF;
+        }
+
+        .url-label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #8B0000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .url-text {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            color: #1A1A24;
+            font-weight: 600;
+            margin-bottom: 25px;
+            word-break: break-all;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 32px;
+            color: #1A1A24;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        ul.benefits-list {
+            list-style: none;
+            margin-bottom: 50px;
+        }
+
+        ul.benefits-list li {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        ul.benefits-list li i {
+            color: #8B0000;
+            font-size: 24px;
+            margin-right: 20px;
+            margin-top: 4px;
+            min-width: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-row">
+            <h1>Your Inventory Is Open 24/7 — Even When the Store Is Closed</h1>
+        </div>
+        <div class="col-left">
+            <p class="intro-text">Every store on GatherYourMagic gets a public URL — a live web page that shows your current inventory to anyone with a browser. Local players can check what you have before making the trip.</p>
+            <div class="url-box">
+                <span class="url-label">Example URL</span>
+                <span class="url-text">gatheryourmagic.com/stores/mycomicshop</span>
+            </div>
+        </div>
+        <div class="col-center">
+            <h2>What this does for your business:</h2>
+            <ul class="benefits-list">
+                <li><i class="fas fa-route"></i> Customers plan visits around what you have in stock, increasing conversion when they arrive.</li>
+                <li><i class="fas fa-bullseye"></i> Players searching for a specific card see a notification: "Available at a store near you" — driving foot traffic directly to you.</li>
+                <li><i class="fas fa-search-location"></i> Your store appears in local search results for Magic: The Gathering cards.</li>
+                <li><i class="fas fa-sync-alt"></i> No extra work required — the storefront updates automatically as your inventory changes.</li>
+            </ul>
+        </div>
+        <div class="col-right"></div>
+    </div>
+</body>
+</html>

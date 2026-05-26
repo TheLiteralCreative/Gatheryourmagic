@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 150px 1fr;
+            border: 8px solid #1A1A24;
+        }
+        
+        .header-row {
+            grid-column: 1 / -1;
+            border-bottom: 8px solid #1A1A24;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            background-color: #FFFFFF;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 48px;
+            color: #1A1A24;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            padding-top: 10px; /* keep title top padding consistency */
+        }
+
+        .col-left {
+            padding: 40px 40px;
+            border-right: 8px solid #1A1A24;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .col-right {
+            padding: 40px 40px;
+            background-color: #FAFAFA;
+            display: flex;
+            flex-direction: column;
+        }
+
+        p.intro-text {
+            font-size: 24px;
+            line-height: 1.6;
+        }
+
+        p.intro-text::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 100px;
+            float: left;
+            line-height: 0.8;
+            padding-right: 12px;
+            padding-top: 10px;
+            color: #8B0000;
+        }
+        
+        .conclusion-box {
+            border-top: 8px solid #DAA520;
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+
+        p.conclusion-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1A1A24;
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            color: #8B0000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        ul.feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.feature-list li {
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        ul.feature-list li i {
+            color: #DAA520;
+            font-size: 24px;
+            margin-right: 16px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-row">
+            <h1>The MVP Is the Foundation — Not the Ceiling</h1>
+        </div>
+        <div class="col-left">
+            <p class="intro-text">The platform is being built on an architecture designed to grow. Once the comic shop MVP is live and validated, the full GatherYourMagic platform expands to serve individual collectors, competitive players, and additional game stores — with no rebuild required.</p>
+            <div class="conclusion-box">
+                <p class="conclusion-text">Your store will be the proof of concept that demonstrates what the platform can do — and the first entry in a growing network of local game stores that drives players to your door.</p>
+            </div>
+        </div>
+        <div class="col-right">
+            <h2>What comes next (already planned):</h2>
+            <ul class="feature-list">
+                <li><i class="fas fa-layer-group"></i> Personal collection management for individual players</li>
+                <li><i class="fas fa-robot"></i> AI-powered deck building coach and rules referee</li>
+                <li><i class="fas fa-brain"></i> Playstyle profiling for personalized recommendations</li>
+                <li><i class="fas fa-crown"></i> Premium subscription tiers for power users</li>
+                <li><i class="fas fa-gamepad"></i> Support for Pokémon, Yu-Gi-Oh!, and other card games</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

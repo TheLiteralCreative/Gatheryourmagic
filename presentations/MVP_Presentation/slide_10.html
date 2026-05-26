@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr;
+            overflow: hidden;
+        }
+        
+        .col-left {
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-right: 8px solid #1A1A24;
+        }
+        
+        .accent-box-top {
+            height: 70%;
+        }
+        
+        .accent-box-bottom {
+            height: 30%;
+            border-top: 8px solid #1A1A24;
+            background-color: #DAA520;
+        }
+
+        .col-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            border-right: 8px solid #1A1A24;
+            position: relative;
+        }
+        
+        .col-right {
+            background-color: #8B0000;
+            display: flex;
+            align-items: flex-start;
+            padding: 40px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 96px;
+            color: #1A1A24;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            color: #8B0000;
+            line-height: 1.4;
+            margin-bottom: 40px;
+        }
+
+        .supporting-line {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+            color: #1A1A24;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 4px solid #DAA520;
+            padding-top: 20px;
+            display: inline-block;
+            margin-top: auto;
+        }
+        
+        .decorative-element {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            width: 40px;
+            height: 40px;
+            background-color: #DAA520;
+            border: 8px solid #1A1A24;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="col-left">
+            <div class="accent-box-top"></div>
+            <div class="accent-box-bottom"></div>
+        </div>
+        <div class="col-center">
+            <h1>Let's Build It</h1>
+            <h2>GatherYourMagic.com — Your Collection, Organized. Your Customers, Served.</h2>
+            <div class="supporting-line">Questions? Let's talk.</div>
+            <div class="decorative-element"></div>
+        </div>
+        <div class="col-right">
+            <!-- Right column accent -->
+        </div>
+    </div>
+</body>
+</html>

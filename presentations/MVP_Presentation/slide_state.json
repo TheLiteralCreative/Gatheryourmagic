@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "title": "Title Slide",
+    "created": 1779771804.434,
+    "last_updated": 1779772023.543,
+    "total_slides": 10
+  },
+  "slides": [
+    {
+      "id": "slide_1",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "slide_2",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "slide_3",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "slide_4",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "slide_5",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "slide_6",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "slide_7",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "slide_8",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "slide_9",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "slide_10",
+      "state": "edited",
+      "pageNum": 10
+    }
+  ],
+  "outline": [
+    {
+      "id": "slide_1",
+      "title": "Title Slide",
+      "summary": "Title slide introducing GatherYourMagic.com as a digital inventory solution for the comic shop commission.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "slide_2",
+      "title": "The Problem We're Solving",
+      "summary": "Outlines the current challenges faced by the comic shop in managing their MTG inventory.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "slide_3",
+      "title": "What We're Building",
+      "summary": "Introduces the three core MVP deliverables: the inventory system, the in-store kiosk, and the public storefront.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "slide_4",
+      "title": "The Inventory System",
+      "summary": "Details the features and capabilities of the digital inventory management system.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "slide_5",
+      "title": "The In-Store Kiosk",
+      "summary": "Explains how the customer-facing kiosk mode works and benefits the store staff.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "slide_6",
+      "title": "The Public Storefront",
+      "summary": "Describes the benefits of having a 24/7 public online storefront for the comic shop.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "slide_7",
+      "title": "The MVP Timeline",
+      "summary": "Provides a week-by-week breakdown of the 8-week development timeline.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "slide_8",
+      "title": "What Happens After the MVP",
+      "summary": "Outlines the future expansion plans for the platform beyond the initial MVP.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "slide_9",
+      "title": "What We Need to Get Started",
+      "summary": "Lists the three requirements from the client to kick off the development process.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "slide_10",
+      "title": "Closing Slide",
+      "summary": "Closing slide with contact information and a call to action.",
+      "image_plan": "Use a suitable image if needed"
+    }
+  ]
+}
